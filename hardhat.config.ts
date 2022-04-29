@@ -7,6 +7,7 @@ import "solidity-coverage"
 
 import "./task/mint.ts"
 import "./task/mintBatch.ts"
+import "./task/checkAll.ts"
 
 dotenv.config();
 
