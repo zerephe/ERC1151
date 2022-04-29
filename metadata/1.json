@@ -1,0 +1,19 @@
+{
+  "description": "Uniqe web collectible TWO.", 
+  "image": "https://gateway.pinata.cloud/ipfs/QmNP6tkdkwy4TPbjCdydzGCYYNJMVp2tGXrS8iEzjRWGbq",
+  "name": "WEC_TWO",
+  "attributes": [
+    {
+      "trait_type": "Coolness", 
+      "value": "vyshe-kryshi"
+    }, 
+    {
+      "trait_type": "Type", 
+      "value": "Blue Quartz"
+    }, 
+    {
+      "trait_type": "Lifetime(years)", 
+      "value": 1278
+    }
+  ]
+}

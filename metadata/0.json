@@ -1,0 +1,19 @@
+{
+  "description": "Uniqe web collectible ONE.", 
+  "name": "NUMBER_ONE",
+  "attributes": [
+    {
+      "trait_type": "Coolness", 
+      "value": "zapredel'naya"
+    }, 
+    {
+      "trait_type": "Type", 
+      "value": "Emerald"
+    }, 
+    {
+      "trait_type": "Lifetime(years)", 
+      "value": 999
+    }
+  ],
+  "animation_url": "https://numbers-745b4.web.app"
+}
