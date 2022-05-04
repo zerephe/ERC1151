@@ -9,7 +9,7 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 contract NumberCollectible2 is ERC1155, Ownable, ERC1155Supply {
     uint256 public constant ONE = 0;
     uint256 public constant TWO = 1;
-    string private _baseUri = "https://gateway.pinata.cloud/ipfs/QmV4KdKfFTV8MPkj9ntW41RMY22MgUbrGyKsegi1Ax5P9V/";
+    string private _baseUri = "https://ipfs.io/ipfs/QmV4KdKfFTV8MPkj9ntW41RMY22MgUbrGyKsegi1Ax5P9V/{id}.json";
 
     constructor() ERC1155(_baseUri) {
         _mint(msg.sender, ONE, 1, "");
@@ -20,9 +20,9 @@ contract NumberCollectible2 is ERC1155, Ownable, ERC1155Supply {
         _setURI(newuri);
     }
 
-    function uri(uint256 _tokenId) override public view returns(string memory) {
-        return string(abi.encodePacked(super.uri(_tokenId), Strings.toString(_tokenId), ".json"));
-    }
+    // function uri(uint256 _tokenId) override public view returns(string memory) {
+    //     return string(abi.encodePacked(super.uri(_tokenId), Strings.toString(_tokenId), ".json"));
+    // }
 
     function mint(address account, uint256 id, uint256 amount, bytes memory data) external onlyOwner {
         _mint(account, id, amount, data);
