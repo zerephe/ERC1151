@@ -6,8 +6,8 @@ My first ERC1155 token
 
 
 **Etherscan verified**
-`https://rinkeby.etherscan.io/address/0x9ce8727982cd112A4849A296AB2A5E4966d6DFE7#code`
+`https://rinkeby.etherscan.io/address/0xbb6921afe6395EB432940F8e0A67FfD934AC1261#code`
 
 
 **My nft on Opensea**
-`https://testnets.opensea.io/assets/0x9ce8727982cd112a4849a296ab2a5e4966d6dfe7/1`
+`https://testnets.opensea.io/assets/0xbb6921afe6395EB432940F8e0A67FfD934AC1261/1`

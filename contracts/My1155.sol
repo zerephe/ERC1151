@@ -11,18 +11,22 @@ contract NumberCollectible2 is ERC1155, Ownable, ERC1155Supply {
     uint256 public constant TWO = 1;
     string private _baseUri = "https://ipfs.io/ipfs/QmV4KdKfFTV8MPkj9ntW41RMY22MgUbrGyKsegi1Ax5P9V/{id}.json";
 
+    mapping(bytes4 => bool) internal supportedInterfaces;
+
     constructor() ERC1155(_baseUri) {
         _mint(msg.sender, ONE, 1, "");
         _mint(msg.sender, TWO, 1, "");
+
+        supportedInterfaces[type(IERC1155).interfaceId] = true;
     }
 
     function setURI(string memory newuri) public onlyOwner {
         _setURI(newuri);
     }
 
-    // function uri(uint256 _tokenId) override public view returns(string memory) {
-    //     return string(abi.encodePacked(super.uri(_tokenId), Strings.toString(_tokenId), ".json"));
-    // }
+    function supportsInterface(bytes4 interfaceId) public view override returns (bool) {
+        return supportedInterfaces[interfaceId];
+    }
 
     function mint(address account, uint256 id, uint256 amount, bytes memory data) external onlyOwner {
         _mint(account, id, amount, data);
